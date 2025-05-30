@@ -33,10 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $_SESSION['error'] = "⚠️ Error al agregar el producto.";
     }
-
     $stmt->close();
     $conn->close();
-
+    
     header("Location: ../public/inventario.php");
     exit();
 }
